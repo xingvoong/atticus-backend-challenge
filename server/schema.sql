@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS notable;
-CREATE DATABASE notable;
-\c notable;
+DROP DATABASE IF EXISTS fullstack_app;
+CREATE DATABASE fullstack_app;
+\c fullstack_app;
 
 drop table if exists users cascade;
 create table if not exists users (

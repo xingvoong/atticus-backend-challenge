@@ -29,9 +29,11 @@ module.exports = {
   },
 
   deleteUser: (req, res) => {
-    const {id} = req.params;
-    model.users.deleteUser(id)
-    .then(res.status(200).send(`delete a user with id: ${id}`))
+    const {appointment_id, doctor_id} = req.params;
+    // console.log("appointment_id", appoinment_id)
+    // console.log("doctor_id", doctor_id)
+    model.users.deleteUser(appointment_id, doctor_id)
+    .then(res.status(200).send(`delete a user with appointment_id: ${appointment_id}`))
     .catch((err) => { res.status(404).send(err); });
   }
 };

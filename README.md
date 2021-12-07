@@ -1,2 +1,2 @@
-# notable-coding-challenge
-notable coding challenge
+# atticus-backend-challenge
+a repo for atticus backend challenge
