@@ -23,9 +23,10 @@ Some of the assumptions that I make:
 * GET `http://localhost:3000/songs/songname`
 * retrives a list of songs with the given name
 Query Parameters:
+
 | Parameter   | Type        |Description|
 | ----------- | ----------- |-----------|
-| songname  | string    |Specifies the name for which to retrieve songs.|
+| songname    | string      |Specifies the name for which to retrieve songs|
 
 Success Status Code: `200 OK`
 
@@ -53,6 +54,7 @@ Success Status Code: `200 OK`
 ### Delete a song
 - DELETE `http://localhost:3000/songs/delete/songname`
 - delete a song with a given name
+- 
 | Parameter   | Type        | Description|
 | ----------- | ----------- | -----------|
 | name        | text        | name of a song|
@@ -62,6 +64,7 @@ Success Status Code: `200 OK`
 ### Update a song
 - PATCH `http://localhost:3000/songs/update`
 - update the ranking of a song with the given name and ranking
+- 
 | Parameter   | Type        | Description|
 | ----------- | ----------- | -----------|
 | name        | text        | name of a song|
