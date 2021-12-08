@@ -18,9 +18,15 @@ module.exports = {
 
   deleteSong: (req, res) => {
     const {songname} = req.params;
-    console.log('songname', songname)
     model.songs.deleteSong(songname)
     .then(res.status(200).send(`delete a song named: ${songname}`))
+    .catch((err) => { res.status(404).send(err); });
+  },
+
+  updateSong: (req, res) => {
+    const {name, ranking} = req.body
+    model.songs.updateSong(name, ranking)
+    .then(res.status(200).send(`update a song named: ${name} with ranking ${ranking}`))
     .catch((err) => { res.status(404).send(err); });
   }
 };

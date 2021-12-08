@@ -30,12 +30,12 @@ const createSong = async (body) => {
 };
 
 const deleteSong = async (songname) => {
-  const value = [songname]
+  const params = [songname]
   const client = await pool.connect();
   const query = 'delete from songs where name = $1';
 
   try {
-    return await client.query(query, value);
+    return await client.query(query, params);
   } catch (err) {
     return err
   } finally {
@@ -43,6 +43,20 @@ const deleteSong = async (songname) => {
   }
 };
 
+const updateSong = async (name, ranking) => {
+  const params = [name, ranking]
+  const client = await pool.connect();
+  const query = 'update songs set ranking = $2 where name = $1'
+
+  try {
+    return await client.query(query, params);
+  } catch (err) {
+    return err
+  } finally {
+    client.release()
+  }
+}
+
 module.exports = {
-  getSongByName, createSong, deleteSong
+  getSongByName, createSong, deleteSong, updateSong
 };
