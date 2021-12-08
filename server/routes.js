@@ -5,10 +5,11 @@ router.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-router.get('/users', controller.users.getAllUsers);
-router.get('/users/username/:username', controller.users.getUserByName);
-router.get('/users/:userID', controller.users.getUserById)
-router.post('/users/create', controller.users.createUser);
-router.delete('/users/delete/:id', controller.users.deleteUser);
+
+router.get('/songs/:songname', controller.songs.getSongByName);
+
+router.post('/songs/create', controller.songs.createSong);
+
+router.delete('/songs/delete:songname', controller.songs.deleteSong);
 
 module.exports = router;
