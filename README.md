@@ -115,3 +115,10 @@ Given more time I would:
 Server: Node.js, Express
 
 Database: Postgresql
+
+* Web browser
+* npm
+* Linux, macOS, or Windows
+## Acknowledgements
+
+ - [www.atticus.com](https://www.atticus.com/)
